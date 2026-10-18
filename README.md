@@ -25,6 +25,15 @@ npm test           # rules + online integration tests
 npm run simulate   # bot-only balance runs: rounds, minutes, end reasons per player count/mode
 ```
 
+## Deploy (Render, free tier)
+
+`render.yaml` is a ready-made Render blueprint (Node web service, `npm start`, health check at `/health`).
+
+1. Render dashboard → **New → Blueprint** → select this repo.
+2. Deploy. Render serves it over HTTPS, so the PWA install prompt and online rooms (Socket.IO) work out of the box.
+
+The free plan sleeps after inactivity, so the first load after a pause takes ~30 s.
+
 ## Layout
 
 | Path | What |
